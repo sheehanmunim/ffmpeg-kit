@@ -1,0 +1,14 @@
+prefix=/Users/sheehanmunim/ffmpeg-kit/prebuilt/android-arm-neon/ffmpeg
+exec_prefix=${prefix}
+libdir=/Users/sheehanmunim/ffmpeg-kit/prebuilt/android-arm-neon/ffmpeg/lib
+includedir=/Users/sheehanmunim/ffmpeg-kit/prebuilt/android-arm-neon/ffmpeg/include
+
+Name: libavutil_neon
+Description: FFmpeg utility library
+Version: 58.2.100
+Requires: 
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavutil_neon 
+Libs.private: -pthread -lm -latomic
+Cflags: -I${includedir}

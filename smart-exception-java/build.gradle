@@ -1,0 +1,98 @@
+apply plugin: 'java-library'
+apply plugin: 'maven-publish'
+apply plugin: 'signing'
+
+group = 'com.arthenica'
+version = '0.2.1'
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+dependencies {
+    // No external dependencies needed
+}
+
+jar {
+    archiveBaseName = 'smart-exception-java'
+    archiveVersion = version
+    
+    manifest {
+        attributes(
+            'Implementation-Title': 'Smart Exception Java',
+            'Implementation-Version': version,
+            'Implementation-Vendor': 'ffmpeg-kit-replacement'
+        )
+    }
+}
+
+// Create sources JAR
+task sourcesJar(type: Jar) {
+    archiveClassifier = 'sources'
+    from sourceSets.main.allSource
+}
+
+// Create javadoc JAR
+task javadocJar(type: Jar) {
+    archiveClassifier = 'javadoc'
+    from javadoc
+}
+
+// Publishing configuration
+publishing {
+    publications {
+        maven(MavenPublication) {
+            from components.java
+            
+            artifact sourcesJar
+            artifact javadocJar
+            
+            pom {
+                name = 'Smart Exception Java'
+                description = 'Replacement library for deprecated com.arthenica:smart-exception-java dependency used by ffmpeg-kit'
+                url = 'https://github.com/your-username/ffmpeg-kit-smart-exception-fix'
+                
+                licenses {
+                    license {
+                        name = 'MIT License'
+                        url = 'http://www.opensource.org/licenses/mit-license.php'
+                    }
+                }
+                
+                developers {
+                    developer {
+                        id = 'ffmpeg-kit-community'
+                        name = 'FFmpeg Kit Community'
+                        email = 'community@ffmpeg-kit.org'
+                    }
+                }
+            }
+        }
+    }
+    
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = "https://maven.pkg.github.com/your-username/ffmpeg-kit-smart-exception-fix"
+            credentials {
+                username = project.findProperty("gpr.user") ?: System.getenv("USERNAME")
+                password = project.findProperty("gpr.key") ?: System.getenv("TOKEN")
+            }
+        }
+        
+        // Local repository for testing
+        mavenLocal()
+    }
+}
+
+// Task to build the AAR file (for Android)
+task buildAar(type: Copy) {
+    dependsOn jar
+    from "${buildDir}/libs/"
+    into "${buildDir}/outputs/"
+    include "*.jar"
+    rename { String fileName ->
+        fileName.replace('.jar', '.aar')
+    }
+}
+
+build.dependsOn buildAar 

@@ -1,0 +1,7 @@
+-classpath '/Users/sheehanmunim/ffmpeg-kit/smart-exception-java/build/classes/java/main:/Users/sheehanmunim/ffmpeg-kit/smart-exception-java/build/resources/main'
+-d '/Users/sheehanmunim/ffmpeg-kit/smart-exception-java/build/docs/javadoc'
+-doctitle 'smart-exception-java 0.2.1 API'
+-notimestamp 
+-quiet 
+-windowtitle 'smart-exception-java 0.2.1 API'
+'/Users/sheehanmunim/ffmpeg-kit/smart-exception-java/src/main/java/com/arthenica/smartexception/java/Exceptions.java'

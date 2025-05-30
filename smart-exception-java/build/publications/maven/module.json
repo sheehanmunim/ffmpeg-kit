@@ -1,0 +1,60 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "com.arthenica",
+    "module": "smart-exception-java",
+    "version": "0.2.1",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.14.1"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api"
+      },
+      "files": [
+        {
+          "name": "smart-exception-java-0.2.1.jar",
+          "url": "smart-exception-java-0.2.1.jar",
+          "size": 1707,
+          "sha512": "bcf56e0bbb0c034e16de2be5b87fb974197a1f707630d4c738b0365066c2a80754cd7abb6f3261a084ccdb80b4c95e973537bcc75ef3e3a2417936fd95d43ece",
+          "sha256": "f6f67aa17778c15227de97a1be9edb87d62679c8e0fbcb100f92d8f80ab981ca",
+          "sha1": "fcb645ce3ef874eb7b0db141f7d975e51f78d02c",
+          "md5": "c366a4ce1c3a69b74cf48b626fda481e"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime"
+      },
+      "files": [
+        {
+          "name": "smart-exception-java-0.2.1.jar",
+          "url": "smart-exception-java-0.2.1.jar",
+          "size": 1707,
+          "sha512": "bcf56e0bbb0c034e16de2be5b87fb974197a1f707630d4c738b0365066c2a80754cd7abb6f3261a084ccdb80b4c95e973537bcc75ef3e3a2417936fd95d43ece",
+          "sha256": "f6f67aa17778c15227de97a1be9edb87d62679c8e0fbcb100f92d8f80ab981ca",
+          "sha1": "fcb645ce3ef874eb7b0db141f7d975e51f78d02c",
+          "md5": "c366a4ce1c3a69b74cf48b626fda481e"
+        }
+      ]
+    }
+  ]
+}

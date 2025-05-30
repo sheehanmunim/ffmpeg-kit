@@ -1,0 +1,14 @@
+prefix=/Users/sheehanmunim/ffmpeg-kit/prebuilt/android-arm64/ffmpeg
+exec_prefix=${prefix}
+libdir=/Users/sheehanmunim/ffmpeg-kit/prebuilt/android-arm64/ffmpeg/lib
+includedir=/Users/sheehanmunim/ffmpeg-kit/prebuilt/android-arm64/ffmpeg/include
+
+Name: libavutil
+Description: FFmpeg utility library
+Version: 58.2.100
+Requires: 
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavutil 
+Libs.private: -pthread -lm -latomic
+Cflags: -I${includedir}

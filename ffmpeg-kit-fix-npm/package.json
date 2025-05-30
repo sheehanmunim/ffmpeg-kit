@@ -1,0 +1,38 @@
+{
+  "name": "ffmpeg-kit-react-native-fix",
+  "version": "1.0.0",
+  "description": "Automatic fix for ffmpeg-kit-react-native Android build issues caused by missing smart-exception-java dependency",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "node postinstall.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ffmpeg-kit",
+    "react-native",
+    "android",
+    "smart-exception",
+    "fix",
+    "expo"
+  ],
+  "author": "FFmpeg Kit Community",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/ffmpeg-kit-react-native-fix"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/ffmpeg-kit-react-native-fix/issues"
+  },
+  "homepage": "https://github.com/your-username/ffmpeg-kit-react-native-fix#readme",
+  "peerDependencies": {
+    "react-native": ">=0.60.0"
+  },
+  "files": [
+    "index.js",
+    "postinstall.js",
+    "smart-exception-java.jar",
+    "Exceptions.java",
+    "README.md"
+  ]
+}
