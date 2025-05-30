@@ -1,7 +1,7 @@
 {
   "name": "ffmpeg-kit-react-native",
-  "version": "6.0.2",
-  "description": "FFmpeg Kit for React Native",
+  "version": "6.0.2-custom",
+  "description": "FFmpeg Kit for React Native (Custom Build with native binaries)",
   "main": "src/index",
   "types": "src/index.d.ts",
   "react-native": "src/index",
@@ -16,15 +16,16 @@
     "android",
     "ffmpeg",
     "ffmpeg-kit",
-    "ios"
+    "ios",
+    "custom-build"
   ],
-  "repository": "https://github.com/arthenica/ffmpeg-kit",
-  "author": "ARTHENICA <open-source@arthenica.com> (https://www.arthenica.com)",
+  "repository": "https://github.com/sheehanmunim/ffmpeg-kit-react-native",
+  "author": "sheehanmunim",
   "license": "LGPL-3.0",
   "bugs": {
-    "url": "https://github.com/arthenica/ffmpeg-kit/issues"
+    "url": "https://github.com/sheehanmunim/ffmpeg-kit-react-native/issues"
   },
-  "homepage": "https://github.com/arthenica/ffmpeg-kit",
+  "homepage": "https://github.com/sheehanmunim/ffmpeg-kit-react-native",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
